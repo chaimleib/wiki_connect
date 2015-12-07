@@ -7,12 +7,12 @@ class WikiConnect
   end
 
   def source(params)
-    params = params.dup.merge!(@config['source']['params'])
+    params = params.merge(@config['source']['params'])
     uri = uri_from_params(params, 'source')
   end
 
   def revisions(params)
-    params = params.dup.merge!(@config['revisions']['params'])
+    params = params.merge(@config['revisions']['params'])
     uri = uri_from_params(params, 'revisions')
   end
 
