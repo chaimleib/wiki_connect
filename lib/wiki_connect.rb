@@ -7,8 +7,12 @@ class WikiConnect
     @config['host'] = URI.parse(@config['host'])
   end
 
+  def source(params)
+    params = params.dup.merge!(@config['source'].params)
+  end
+
   def revisions(params)
-    params = params.dup.merge!(@config.params)
+    params = params.dup.merge!(@config['revisions'].params)
   end
 
   def path_from_params(params)
