@@ -1,0 +1,25 @@
+source:
+  host: 'https://en.wikipedia.org/'
+  path: '/w/api.php'
+  params:
+    action: parse
+    format: json
+    #page: Trie
+    prop:
+    - text
+    - langlinks
+    - categories
+    - categorieshtml
+    - links
+    - templates
+    - images
+    - externallinks
+    - sections
+    - revid
+    - displaytitle
+    - headitems
+    - headhtml
+    - wikitext
+    - properties
+    - parsetree
+
