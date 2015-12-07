@@ -1,10 +1,27 @@
-source:
+defaults:
   host: 'https://en.wikipedia.org/'
   path: '/w/api.php'
+revisions:
+  params:
+    action: query
+    prop: revisions
+    format: json
+    rvlimit: 500
+    # titles: Trie
+    rvprop:
+    - ids
+    - timestamp
+    - user
+    - size
+    - comment
+    - parsedcomment
+    - content
+    - parsetree
+source:
   params:
     action: parse
     format: json
-    #page: Trie
+    # page: Trie
     prop:
     - text
     - langlinks
@@ -22,4 +39,3 @@ source:
     - wikitext
     - properties
     - parsetree
-
